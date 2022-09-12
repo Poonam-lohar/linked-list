@@ -35,7 +35,7 @@ public class LinkedList {
         }
     }
 
-    public void insertMiddle(int data) {
+    public void insertAtMiddle(int data) {
         Node newNode = new Node(data);
         if (head == null) {
         } else {
@@ -49,5 +49,12 @@ public class LinkedList {
             middle.next = newNode;
         }
     }
+    public void pop() {
+        if(head == null) {
+            System.out.print("empty");
+        }
+        head = head.next;
+    }
 }
+
 

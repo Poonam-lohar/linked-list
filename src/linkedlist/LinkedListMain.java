@@ -7,7 +7,7 @@ public class LinkedListMain {
             list.append(70);
             list.show();
 
-            list.insertMiddle(30);
+            list.insertAtMiddle(30);
             list.show();
         }
 
