@@ -1,5 +1,6 @@
 package linkedlist;
-public class LinkedList {
+
+public class Link {
     Node head;
     Node tail;
 
@@ -49,25 +50,27 @@ public class LinkedList {
             middle.next = newNode;
         }
     }
-    public void pop() {
-        if(head == null) {
-            System.out.print("empty");
+
+    //public void pop() {
+        public void popFirstelement () {
+            if (head == null) {
+                System.out.print("empty");
+                System.out.print("is empty");
+            }
+            head = head.next;
         }
-        head = head.next;
+
+        public Node popLastelement () {
+            if (head == null || head.next == null) {
+                return null;
+            }
+            Node temp = head;
+            while (temp.next.next != null) {
+                temp = temp.next;
+            }
+            temp.next = null;
+
+            return head;
+
+        }
     }
-    public Node popLastelement () {
-        if (head == null || head.next == null) {
-            return null;
-        }
-        Node temp = head;
-        while (temp.next.next != null) {
-            temp = temp.next;
-        }
-        temp.next = null;
-
-        return head;
-
-    }
-}
-
-
